@@ -1,5 +1,5 @@
+
 import streamlit as st
-from llama_index import GPTSimpleVectorIndex
 from llama_index import GPTSimpleVectorIndex
 from pathlib import Path
 from gpt_index import download_loader
@@ -16,7 +16,7 @@ def create_index(pdf_file):
     PDFReader = download_loader("PDFReader")
     loader = PDFReader()
 
-     Create a directory to store the uploaded files
+    # Create a directory to store the uploaded files
     upload_dir = Path('uploads')
     upload_dir.mkdir(exist_ok=True)
 
@@ -37,7 +37,7 @@ st.image(image, caption='')
 
 st.title("GPT Index Creator")
 
-Create a dropdown menu for single/multiple files
+# Create a dropdown menu for single/multiple files
 upload_option = st.selectbox("Choose upload option", ["Single file", "Multiple files"])
 
 if upload_option == "Single file":
