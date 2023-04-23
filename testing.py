@@ -1,6 +1,5 @@
 
 import streamlit as st
-st.title("GPT Index Creator")
 from llama_index import GPTSimpleVectorIndex
 from pathlib import Path
 from gpt_index import download_loader
